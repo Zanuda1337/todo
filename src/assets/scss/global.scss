@@ -18,6 +18,7 @@
   --light-gray2: #B8B8B8;
   --dull-amaranth-pink: #e9d9d8;
   --wet-asphalt: #4d4d4d;
+  --dull-gray: #6a6a6a;
 
   --gray: #f4f4f4;
   /* ------ THEME ------ */
@@ -25,12 +26,13 @@
   --background-light: var(--white);
   --title: var(--dull-amaranth-pink);
   --foreground: var(--wet-asphalt);
+  --foreground-light: var(--dull-gray);
   --separator-common: var(--gray)
 }
 
 ::-webkit-scrollbar {
   width: 1.2rem;
-  background: var(--background);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,12 +40,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 0.3rem solid var(--background);
+  border: 0.3rem solid var(--background-light);
   border-radius: 1rem;
-  background: var(--scrollbar);
-}
-::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-active);
+  background: var(--separator-common);
 }
 
 body {
@@ -53,6 +52,10 @@ body {
   background: var(--background);
   overflow: hidden;
 }
+.MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+  transform: rotate(0) !important;
+}
+
 
 @media(min-width: 1920px) {
   *, *:after, *:before {
